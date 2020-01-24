@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: tim
-Build-Jdk: 10.0.2
+Build-Jdk-Spec: 10
+Main-Class: ch.bbw.td.consolecalculator.App
 Created-By: Maven Integration for Eclipse
 
