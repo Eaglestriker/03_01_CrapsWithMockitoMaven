@@ -30,6 +30,7 @@ public class Craps
             return true;
 
          case 2:
+         case 3:
          case 12:
             return false;
 
