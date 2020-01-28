@@ -1,5 +1,8 @@
 Manifest-Version: 1.0
 Build-Jdk-Spec: 10
+Class-Path: javafx-controls-11.jar javafx-controls-11-mac.jar javafx-g
+ raphics-11.jar javafx-graphics-11-mac.jar javafx-base-11.jar javafx-b
+ ase-11-mac.jar
 Main-Class: ch.bbw.td.consolecalculator.App
 Created-By: Maven Integration for Eclipse
 
