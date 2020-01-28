@@ -1,24 +1,46 @@
 package ch.bbw.td.craps;
 
 
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 /**
  * The craps game
  * @author Tim Dubath
  * @version 24.01.2020
  */
-public class App
+public class App extends Application
 {
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("CrapsSpiel.fxml"));
+			Controller controller = new Controller();
+			Dice myDice = new Dice();
+			Craps craps = new Craps(myDice);
+			loader.setController(controller);
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+
+			primaryStage.setTitle("Spiele das Spiel!");
+			primaryStage.setScene(scene);
+
+			primaryStage.show();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	
    public static void main(String[] args)
    {
-      Dice myDice = new Dice();
-      Craps myCraps = new Craps(myDice);
-      if (myCraps.play())
-      {
-         System.out.println("Gewonnen");
-      }
-      else
-      {
-         System.out.println("verloren");
-      }
+	  launch(args);
    }
+
+
+
 }
