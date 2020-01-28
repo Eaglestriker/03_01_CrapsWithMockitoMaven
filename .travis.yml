@@ -1,4 +1,5 @@
 language: java
+	version: oraclejdk8
 sudo: false
 script: mvn install
 before_deploy:
