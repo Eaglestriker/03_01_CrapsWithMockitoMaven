@@ -17,7 +17,7 @@ public class App extends Application
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource("Untitled.fxml"));
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("CrapsSpiel.fxml"));
 			Controller controller = new Controller();
 			Dice myDice = new Dice();
 			Craps craps = new Craps(myDice);
@@ -25,7 +25,7 @@ public class App extends Application
 			Parent root = loader.load();
 			Scene scene = new Scene(root);
 
-			primaryStage.setTitle("Öffne das Tor!");
+			primaryStage.setTitle("Spiele das Spiel!");
 			primaryStage.setScene(scene);
 
 			primaryStage.show();
