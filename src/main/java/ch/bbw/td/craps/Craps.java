@@ -23,25 +23,16 @@ public class Craps {
 		sum = sum + dice.roll();
 
 		if (sum == 7 || sum == 11) {
-			System.out.println("gewonnen");
-			System.out.println(sum);
 			return true;
 		} 
 		else if (sum == 2 || sum == 3 || sum == 12) {
-			System.out.println("verloren");
-			System.out.println(sum);
 			return false;
 		} 
 		else{
 			while (true) {
-				System.out.println("neuer Wurf");
 				oldSum = sum;
-				System.out.println("OldSum");
-				System.out.println(oldSum);
 				sum = dice.roll();
 				sum = sum + dice.roll();
-				System.out.println("New");
-				System.out.println(sum);
 
 				if (sum == 7) {
 					return false;
