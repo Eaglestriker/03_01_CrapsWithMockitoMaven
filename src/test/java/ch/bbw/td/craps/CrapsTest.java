@@ -97,4 +97,41 @@ public class CrapsTest {
 		assertTrue(testee.play() == false);
 	}
 	
+	
+	//Vierter Folgewurf
+	//Auch Fünfter Wurf genannt
+	
+	@Test
+	//First Round Summe 5 -> 
+	//Second Round Summe 5 -> 9 
+	//Third Round Summe 9 -> 4 
+	//Fourth Round 4 -> 2
+	//Fift Round 2 -> 2 Gewonnen
+	public void testPlayDiceFiftRoundReturnsSumOf5Second9Third4Fourth2Fift2ReturnsTrue() {
+		System.out.println("");
+		System.out.println("Test 7");
+		Dice dice = mock(Dice.class);
+		when(dice.roll()).thenReturn(2).thenReturn(3).thenReturn(6).thenReturn(3).thenReturn(2).thenReturn(2).thenReturn(1).thenReturn(1);
+	
+		testee = new Craps(dice);
+		assertTrue(testee.play() == true);
+	}
+	
+
+	@Test
+	//First Round Summe 5 -> 
+	//Second Round Summe 5 -> 9 
+	//Third Round Summe 9 -> 4 
+	//Fourth Round 4 -> 2
+	//Fift Round 2 -> 7 verloren
+	public void testPlayDiceFiftRoundReturnsSumOf5Second9Third4Fourth2Fift7Returnsfalse() {
+		System.out.println("");
+		System.out.println("Test 7");
+		Dice dice = mock(Dice.class);
+		when(dice.roll()).thenReturn(2).thenReturn(3).thenReturn(6).thenReturn(3).thenReturn(2).thenReturn(2).thenReturn(1).thenReturn(6);
+	
+		testee = new Craps(dice);
+		assertTrue(testee.play() == false);
+	}
+	
 }
