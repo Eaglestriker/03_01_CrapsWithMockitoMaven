@@ -2,7 +2,6 @@ language: java
 sudo: false
 script:
   - mvn clean javafx:run
-  - mvn install
 before_deploy:
       # Set up git user name and tag this commit
       - git config --local user.name "Eaglestriker"
